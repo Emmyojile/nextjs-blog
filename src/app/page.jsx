@@ -1,13 +1,26 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-// import Hero from 'public/hero.jpg'
+import Image from "next/image";
+import styles from "./page.module.css";
+import Hero from "public/new.jpg";
+import Button from "@/components/button/Button";
 
 export default function Home() {
   return (
-    <div>
-      <div></div>
-      <div></div>
-      <Image src="/hero.jpg" width={20} height={20} className={styles.img}/>
+    <div className={styles.container}>
+      <div className={styles.item}>
+        <h1 className={styles.title}>
+          Better Design For Your Digital Products
+        </h1>
+        <p className={styles.desc}>
+          Turning your Ideas into Reality. We bring together the teams from the
+          global tech industry
+        </p>
+        <Button url='/portfolio' text='See Our Works'/>
+        
+      </div>
+
+      <div className={styles.item}>
+        <Image src={Hero} className={styles.img} />
+      </div>
     </div>
-  )
+  );
 }
