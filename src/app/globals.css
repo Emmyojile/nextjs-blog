@@ -15,10 +15,15 @@ a{
   color: inherit;
 }
 
-/* .light{
+.theme{
+  transition: 1s all ease;
+}
+
+.light{
   background-color: white;
   color: #111;
-} */
+}
+
 .dark{
   background-color: #111;
   color: #bbb;
