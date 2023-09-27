@@ -4,6 +4,11 @@ import Image from 'next/image'
 import contactImg from "public/contact.jpg";
 import Button from '@/components/button/Button';
 
+export const metadata = {
+  title: "Emmy Dev Contact Information",
+  description: "This Is The Contact Page",
+};
+
 
 const Contact = () => {
   return (
