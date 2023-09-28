@@ -8,6 +8,12 @@ const handler = NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
+  secret: process.env.NEXTAUTH_SECRET,
+  callbackUrl: process.env.CALLBACK_URL,
+  debug: false,
+  jwt: {
+      maxAge: 3 * 24 * 60 * 60,
+  },
 });
 
-export {handler as GET, handler as POST}
+export {handler as GET, handler as POST};
