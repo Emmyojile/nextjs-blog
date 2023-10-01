@@ -2,25 +2,27 @@ import mongoose from "mongoose";
 // import bcrypt  from 'bcryptjs'
 // import jwt  from 'jsonwebtoken';
 
-const userSchema = new mongoose.Schema({
-name: {
-    type: String,
-    required: true,
-    unique: true
-},
-email: {
-    type: String,
-    required: true,
-    unique: true
-},
-password: {
-    type: String,
-    required: true,
-},
-
-}, {
-    timestamps: true
-});
+const userSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
 
 // userSchema.pre('save', async function () {
 //     const salt = await bcrypt.genSalt(10)
@@ -37,4 +39,4 @@ password: {
 //     return jwt.sign({id:this._id},process.env.JWT_SECRET,{expiresIn:'1d'})
 // }
 
-export default mongoose.model('User', userSchema);
+export default mongoose.model("User", userSchema);

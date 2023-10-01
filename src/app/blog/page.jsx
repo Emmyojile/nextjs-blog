@@ -5,7 +5,7 @@ import Image from "next/image";
 
 async function getData() {
   const res = await fetch("http://localhost:3000/api/posts", {
-    cache: "no-store"
+    cache: "no-store",
   });
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
@@ -23,7 +23,11 @@ const Blog = async () => {
   return (
     <div className={styles.mainContainer}>
       {data.map((item) => (
-        <Link href={`/blog/${item._id}`} className={styles.container} key={item.id}>
+        <Link
+          href={`/blog/${item._id}`}
+          className={styles.container}
+          key={item.id}
+        >
           <div className={styles.imgContainer}>
             <Image
               src={item.image}

@@ -1,8 +1,8 @@
 .container {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 50px;
 }
 
 .img {
@@ -17,9 +17,9 @@
   justify-content: center;
 }
 
-.title{
-    font-size: 50px;
+.title {
+  font-size: 50px;
 }
-.desc{
-    font-size: 20px;
+.desc {
+  font-size: 20px;
 }

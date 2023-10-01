@@ -1,8 +1,8 @@
-"use client"
-import React, { useEffect, useState } from 'react';
-import styles from './dashboard.module.css'
-import useSWR from 'swr'
-import { useSession } from 'next-auth/react';
+"use client";
+import React, { useEffect, useState } from "react";
+import styles from "./dashboard.module.css";
+import useSWR from "swr";
+import { useSession } from "next-auth/react";
 
 const Dashboard = () => {
   // const [data, setData] = useState([])
@@ -17,13 +17,13 @@ const Dashboard = () => {
   //     });
   //     // The return value is *not* serialized
   //     // You can return Date, Map, Set, etc.
-    
+
   //     if (!res.ok) {
   //       // This will activate the closest `error.js` Error Boundary
   //       // throw new Error("Failed to fetch data");
   //       setErr(true);
   //     }
-    
+
   //     const data = await res.json();
   //     setData(data);
   //     setIsLoading(false)
@@ -31,18 +31,18 @@ const Dashboard = () => {
   //   getData();
   // },[]);
 
-  const session = useSession()
+  const session = useSession();
   console.log(session);
 
-  const fetcher = (...args) => fetch(...args).then(res => res.json());
+  const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-  const { data, error, isLoading } = useSWR('https://jsonplaceholder.typicode.com/posts', fetcher);
- 
+  const { data, error, isLoading } = useSWR(
+    "https://jsonplaceholder.typicode.com/posts",
+    fetcher
+  );
 
   // console.log(data);
-  return (
-    <div className={styles.container}>Dashboard</div>
-  )
-}
+  return <div className={styles.container}>Dashboard</div>;
+};
 
-export default Dashboard
+export default Dashboard;
