@@ -18,7 +18,7 @@ const handler = NextAuth({
         await connectDb();
 
         try {
-          const user = User.findOne({ email: credentials.email });
+          const user = async User.findOne({ email: credentials.email });
 
           if (user) {
             //check for password
@@ -32,7 +32,6 @@ const handler = NextAuth({
             } else {
               throw new Error("Wrong Credentials");
             }
-            
           } else {
             throw new Error("User Not Found");
           }
@@ -42,6 +41,9 @@ const handler = NextAuth({
       },
     }),
   ],
+  pages: {
+    error: "/dashboard/login"
+  }
 });
 
 export { handler as GET, handler as POST };
