@@ -21,6 +21,7 @@ const NavBar = () => {
       <Link href="/">About</Link>
       <AuthLinks/>
       </div>
+      
 
     </div>
 
