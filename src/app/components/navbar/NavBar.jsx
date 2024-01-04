@@ -1,6 +1,8 @@
 import Image from "next/image"
 import styles from "./navbar.module.css"
 import Link from "next/link"
+import AuthLinks from "../authLinks/AuthLinks"
+import ThemeToggle from "../themeToggle/ThemeToggle"
 
 const NavBar = () => {
   return (
@@ -13,9 +15,11 @@ const NavBar = () => {
       </div>
       <div className={styles.logo}>EmmyBlog</div>
       <div className={styles.links}>
+      <ThemeToggle/>
       <Link href="/">HomePage</Link>
       <Link href="/">Contact</Link>
       <Link href="/">About</Link>
+      <AuthLinks/>
       </div>
 
     </div>

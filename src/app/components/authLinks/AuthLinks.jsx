@@ -1,8 +1,8 @@
 import styles from "./authLinks.module.css"
-const ThemeToggle = () => {
+const AuthLinks = () => {
   return (
-    <div className={styles.container}>ThemeToggle</div>
+    <div className={styles.container}>AuthLinks</div>
   )
 }
 
-export default ThemeToggle
+export default AuthLinks
