@@ -1,19 +1,43 @@
+"use client";
 import Link from "next/link";
 import styles from "./authLinks.module.css";
+import { useState } from "react";
 const AuthLinks = () => {
-  const status = "unauthentiwcated";
+  const [open, setOpen] = useState(false);
+  const status = "unauthenticated";
   return (
     <>
       {status === "unauthenticated" ? (
         <div className={styles.links}>
-          <Link href="/login">Login</Link>
-          <Link href="/register">Register</Link>
+          <Link href="/login" className={styles.link}>Login</Link>
         </div>
       ) : (
         <>
-          <Link href="/write">Write</Link>
+          <Link href="/write" className={styles.link}>Write</Link>
           <span className={styles.link}>Logout</span>
         </>
+      )}
+      <div className={styles.burger} onClick={() => setOpen(!open)}>
+        <div className={styles.line}></div>
+        <div className={styles.line}></div>
+        <div className={styles.line}></div>
+      </div>
+      {open && (
+        <div className={styles.respoonsiveMenu}>
+          <Link href="/">HomePage</Link>
+          <Link href="/">About</Link>
+          <Link href="/">Contact</Link>
+          {status === "unauthenticated" ? (
+            <div className={styles.links}>
+              <Link href="/login">Login</Link>
+            </div>
+          ) : (
+            <>
+              <Link href="/write">Write</Link>
+              <span className={styles.link}>Logout</span>
+            </>
+          )}
+        </div>
       )}
     </>
   );
