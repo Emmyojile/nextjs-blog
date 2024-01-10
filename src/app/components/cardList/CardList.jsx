@@ -1,13 +1,20 @@
-import Pagination from "../pagination/Pagination"
-import styles from "./cardList.module.css"
+import Card from "../card/Card";
+import Pagination from "../pagination/Pagination";
+import styles from "./cardList.module.css";
 
-const CardList = () => {
+const CardList = async () => {
   return (
-    <div className={styles.container}>CardList
-    <Pagination/>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Recent Posts</h1>
+      <div className={styles.posts}>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
+      <Pagination />
     </div>
+  );
+};
 
-  )
-}
-
-export default CardList
+export default CardList;
