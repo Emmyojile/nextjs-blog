@@ -9,11 +9,15 @@ const AuthLinks = () => {
     <>
       {status === "unauthenticated" ? (
         <div className={styles.links}>
-          <Link href="/login" className={styles.link}>Login</Link>
+          <Link href="/login" className={styles.link}>
+            Login
+          </Link>
         </div>
       ) : (
         <>
-          <Link href="/write" className={styles.link}>Write</Link>
+          <Link href="/write" className={styles.link}>
+            Write
+          </Link>
           <span className={styles.link}>Logout</span>
         </>
       )}
@@ -23,7 +27,7 @@ const AuthLinks = () => {
         <div className={styles.line}></div>
       </div>
       {open && (
-        <div className={styles.respoonsiveMenu}>
+        <div className={styles.responsiveMenu}>
           <Link href="/">HomePage</Link>
           <Link href="/">About</Link>
           <Link href="/">Contact</Link>
