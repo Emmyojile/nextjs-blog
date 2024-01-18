@@ -9,7 +9,6 @@ import ReactQuill from "react-quill";
 const WritePage = () => {
   const [open, setOpen] = useState(false);
 
-
   return (
     <div className={styles.container}>
       <input
@@ -57,9 +56,7 @@ const WritePage = () => {
           placeholder="Tell your story..."
         />
       </div>
-      <button className={styles.publish} >
-        Publish
-      </button>
+      <button className={styles.publish}>Publish</button>
     </div>
   );
 };
