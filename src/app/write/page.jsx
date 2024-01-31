@@ -17,9 +17,9 @@ const WritePage = () => {
   if (status === "loading") {
     return <div>Loading...</div>;
   }
-  if (status === "authenticated") {
-    router.push("/");
-  }
+  // if (status === "authenticated") {
+  //   router.push("/");
+  // }
 
   return (
     <div className={styles.container}>
